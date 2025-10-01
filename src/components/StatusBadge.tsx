@@ -10,8 +10,7 @@ export default function StatusBadge({ status }: Props) {
       ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200"
       : s === "IN_PROGRESS"
       ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200"
-      : "bg-amber-50 text-amber-800 ring-1 ring-amber-200"; // TO_DO / default
-
+      : "bg-amber-50 text-amber-800 ring-1 ring-amber-200";
   const label =
     s === "DONE" ? "DONE" : s === "IN_PROGRESS" ? "IN PROGRESS" : "TO DO";
 

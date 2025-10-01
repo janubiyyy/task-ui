@@ -21,12 +21,11 @@ export default function Pagination({
     params.set("page", String(p));
     params.set("limit", String(limit));
     router.replace(`/?${params.toString()}`);
-    // scroll to top
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const hasPrev = page > 1;
-  const hasNext = totalPages ? page < totalPages : true; // kalau meta tidak ada, izinkan Next sampai server kosongkan data
+  const hasNext = totalPages ? page < totalPages : true;
 
   return (
     <div className="mt-4 flex items-center justify-between">

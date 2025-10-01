@@ -27,13 +27,11 @@ const STATUS_FILTER = ["All", "TO_DO", "IN_PROGRESS", "DONE"] as const;
 export default function HomePage() {
   const [status, setStatus] = useState<(typeof STATUS_FILTER)[number]>("All");
   const [page, setPage] = useState(1);
-  const [limit] = useState(5); // tampilkan 5 per halaman
+  const [limit] = useState(5);
   const [loading, setLoading] = useState(false);
   const [rows, setRows] = useState<Task[]>([]);
   const [total, setTotal] = useState(0);
   const [error, setError] = useState<string | null>(null);
-
-  // modal delete
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
 

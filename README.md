@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Manager App
 
-## Getting Started
+Developed by **Tasya Khaerani Janubiya** ✨
 
-First, run the development server:
+Aplikasi Task Manager dengan arsitektur **Frontend (Next.js)**.
+
+## 🔗 Demo
+
+Frontend sudah dideploy di Vercel:  
+👉 [https://task-ui-inky.vercel.app/](https://task-ui-inky.vercel.app/)
+
+---
+
+## ⚡️ Getting Started (Frontend)
+
+Clone repository frontend:
 
 ```bash
+git clone https://github.com/janubiyyy/task-ui.git
+cd task-ui
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend akan berjalan di:  
+👉 [http://localhost:3001](http://localhost:3001)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Backend Setup
 
-## Learn More
+Clone repository backend:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git clone https://github.com/HeruHerdiansyah/test-corenglish.git
+cd test-corenglish
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Jalankan dengan Docker:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker-compose down -v
+docker system prune -af --volumes
+docker-compose build --no-cache
+docker-compose up
+```
 
-## Deploy on Vercel
+Backend akan berjalan di:  
+👉 [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Tech Stack
+
+- **Frontend**: [Next.js](https://nextjs.org), React, TypeScript
+- **Backend**: [NestJS](https://nestjs.com), TypeORM, PostgreSQL, Docker
+- **Deployment**: Vercel (Frontend), Railway (Backend)
+
+---
+
+## 📖 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [NestJS Documentation](https://docs.nestjs.com/)
+
+---
+
+## 🚀 Deploy
+
+- **Frontend** bisa langsung deploy dengan [Vercel](https://vercel.com).
+- **Backend** menggunakan [Railway](https://railway.app) untuk container & database.

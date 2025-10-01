@@ -1,11 +1,7 @@
-// src/lib/api.ts
 import { Task, TaskStatus } from "@/types/task";
 
 const BASE_URL = "http://localhost:3000";
-// src/lib/api.ts
 export async function http<T>(path: string, init?: RequestInit): Promise<T> {
-  const BASE_URL = "http://localhost:3000";
-
   const res = await fetch(`${BASE_URL}${path}`, {
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +18,7 @@ export async function http<T>(path: string, init?: RequestInit): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-// Ambil semua task
+// Get semua task
 export async function getTasks(params?: string) {
   const res = await fetch(`${BASE_URL}/tasks${params || ""}`, {
     cache: "no-store",
@@ -31,7 +27,7 @@ export async function getTasks(params?: string) {
   return res.json();
 }
 
-// Ambil task by id
+// Get task by id
 export async function getTask(id: string): Promise<Task> {
   const res = await fetch(`${BASE_URL}/tasks/${id}`, { cache: "no-store" });
   if (!res.ok) throw new Error(await res.text());

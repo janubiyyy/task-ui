@@ -7,7 +7,7 @@ type Props = {
   onClose: () => void;
   message: string;
   type?: "success" | "error" | "info";
-  duration?: number; // ms
+  duration?: number;
 };
 
 export default function Toast({
