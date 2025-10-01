@@ -69,12 +69,12 @@ export default function HomePage() {
     if (!selectedTask) return;
     try {
       await deleteTask(selectedTask.id);
-      toast.success("✅ Task deleted successfully");
+      toast.success(" Task deleted successfully");
       setIsOpen(false);
       fetchData();
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
-      toast.error("❌ Gagal hapus: " + e.message);
+      toast.error(" Gagal hapus: " + e.message);
     }
   };
 

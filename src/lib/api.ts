@@ -1,11 +1,10 @@
 // src/lib/api.ts
 import { Task, TaskStatus } from "@/types/task";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const BASE_URL = "http://localhost:3000";
 // src/lib/api.ts
 export async function http<T>(path: string, init?: RequestInit): Promise<T> {
-  const BASE_URL =
-    process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+  const BASE_URL = "http://localhost:3000";
 
   const res = await fetch(`${BASE_URL}${path}`, {
     headers: {
